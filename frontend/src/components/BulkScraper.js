@@ -16,7 +16,7 @@ const BulkScraper = () => {
 
     try {
       console.log('📡 Making API call to:', 'https://api.dev.baisahab.com/articles/scraper/bulk');
-      const response = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:8401'}/api/scraper/bulk`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || 'https://api.dev.baisahab.com/articles'}/scraper/bulk`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url, limit }),

@@ -15,7 +15,7 @@ const SingleScraper = () => {
 
     try {
       console.log('📡 Making API call to:', 'https://api.dev.baisahab.com/articles/scraper/url');
-      const response = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:8401'}/api/scraper/url`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || 'https://api.dev.baisahab.com/articles'}/scraper/url`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url }),
